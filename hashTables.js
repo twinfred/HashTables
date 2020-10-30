@@ -9,7 +9,7 @@ function hashStringToInt(string, tableSize) {
 }
 
 class HashTable {
-  table = new Array(3);
+  table = new Array(3333);
   numItems = 0;
 
   resize = () => {
@@ -63,7 +63,6 @@ myTable.setItem('lastName', 'Winfred');
 myTable.setItem('age', 31);
 myTable.setItem('dob', '10/25');
 
-console.log(myTable.table.length);
 console.log(myTable.getItem('firstName'));
 console.log(myTable.getItem('lastName'));
 console.log(myTable.getItem('age'));
