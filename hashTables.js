@@ -1,8 +1,8 @@
-function hashStringToInt(string, tableSize) {
+function hashStringToInt(string, tableSize) { // HASHING STRINGS TO INTEGERS!!
   let hash = 11;
 
   for (let i = 0; i < string.length; i++) {
-    hash = (13 * hash * string.charCodeAt(i)) % tableSize;
+    hash = (13 * hash * string.charCodeAt(i)) % tableSize; // tableSize is the mod
   }
 
   return hash;
@@ -56,6 +56,10 @@ class HashTable {
     }
   }
 }
+
+// Shorter hash table = more collisions = slower operations (getItem/setItem) -- Less wasted space / Less memory used
+// -- Load factor is the percent full threshold to increase the size
+// Larger hash table = less collisions = faster /getItem/setItem -- More wasted space / More memory used
 
 const myTable = new HashTable();
 myTable.setItem('firstName', 'Tim');
